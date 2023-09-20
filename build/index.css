@@ -1,0 +1,165 @@
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+.wp-block-blocks-course-price-table {
+  display: block;
+  /* stylelint-disable-next-line selector-class-pattern */
+}
+.wp-block-blocks-course-price-table.has-1-columns {
+  /* stylelint-disable-next-line selector-class-pattern */
+}
+.wp-block-blocks-course-price-table.has-1-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] {
+  width: calc(100% / 1 - 20px);
+}
+.wp-block-blocks-course-price-table.has-1-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
+  align-self: stretch;
+  width: calc(100% / 1 - 20px);
+  border: 1px dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+}
+.wp-block-blocks-course-price-table.has-2-columns {
+  /* stylelint-disable-next-line selector-class-pattern */
+}
+.wp-block-blocks-course-price-table.has-2-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] {
+  width: calc(100% / 2 - 20px);
+}
+.wp-block-blocks-course-price-table.has-2-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
+  align-self: stretch;
+  width: calc(100% / 2 - 20px);
+  border: 1px dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+}
+.wp-block-blocks-course-price-table.has-3-columns {
+  /* stylelint-disable-next-line selector-class-pattern */
+}
+.wp-block-blocks-course-price-table.has-3-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] {
+  width: calc(100% / 3 - 20px);
+}
+.wp-block-blocks-course-price-table.has-3-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
+  align-self: stretch;
+  width: calc(100% / 3 - 20px);
+  border: 1px dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+}
+.wp-block-blocks-course-price-table.has-4-columns {
+  /* stylelint-disable-next-line selector-class-pattern */
+}
+.wp-block-blocks-course-price-table.has-4-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] {
+  width: calc(100% / 4 - 20px);
+}
+.wp-block-blocks-course-price-table.has-4-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
+  align-self: stretch;
+  width: calc(100% / 4 - 20px);
+  border: 1px dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+}
+.wp-block-blocks-course-price-table.has-5-columns {
+  /* stylelint-disable-next-line selector-class-pattern */
+}
+.wp-block-blocks-course-price-table.has-5-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] {
+  width: calc(100% / 5 - 20px);
+}
+.wp-block-blocks-course-price-table.has-5-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
+  align-self: stretch;
+  width: calc(100% / 5 - 20px);
+  border: 1px dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+}
+.wp-block-blocks-course-price-table.has-6-columns {
+  /* stylelint-disable-next-line selector-class-pattern */
+}
+.wp-block-blocks-course-price-table.has-6-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] {
+  width: calc(100% / 6 - 20px);
+}
+.wp-block-blocks-course-price-table.has-6-columns > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
+  align-self: stretch;
+  width: calc(100% / 6 - 20px);
+  border: 1px dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+}
+.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout [data-type="blocks-course/price-block"] {
+  max-width: none;
+  margin: 10;
+  text-align: center;
+  border-radius: 5px;
+}
+.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] {
+  margin: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 10px rgb(160, 217, 208);
+  border: none;
+  background: linear-gradient(to bottom, rgb(121, 121, 219) 0%, rgb(249, 254, 255) 45%, white 100%);
+  /* Add the styles for h4, h2, li, and button here */
+}
+.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] h4 {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px; /* Adjust margin for a more normal appearance */
+  margin-top: 20px; /* Adjust margin for a more normal appearance */
+  font-size: 24px; /* Adjust font size for a more normal appearance */
+  font-weight: 700; /* Avoid using !important whenever possible */
+  font-family: "ProximaNova-Bold", Helvetica, Arial, sans-serif;
+  line-height: 1.5; /* Adjust line height for a more normal appearance */
+}
+.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] h3 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px; /* Adjust margin for a more normal appearance */
+  margin-top: 0; /* Adjust margin for a more normal appearance */
+  font-weight: 600;
+  font-size: 48px; /* Adjust font size for a more normal appearance */
+}
+.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] li {
+  margin-top: 20px; /* Adjust margin for a more normal appearance */
+  padding-bottom: 10px;
+  list-style-type: none;
+  letter-spacing: 0.5px; /* Adjust letter spacing for a more normal appearance */
+  line-height: 1.6; /* Adjust line height for a more normal appearance */
+  font-weight: 400;
+  font-size: 18px; /* Adjust font size for a more normal appearance */
+}
+.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: 1px solid #27264b;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #27264b;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 250ms ease-in-out;
+}
+.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] button:hover {
+  background-color: rgb(0, 9, 64);
+}
+.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout button:hover {
+  background-color: #9390db;
+  color: rgb(255, 255, 255);
+}
+
+/*# sourceMappingURL=index.css.map*/

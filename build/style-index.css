@@ -1,0 +1,80 @@
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+.wp-block-blocks-course-price-table {
+  margin-left: -10px;
+  margin-left: -10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wp-block-blocks-course-price-table.has-1-columns .wp-block-blocks-course-price-block {
+  width: calc(100% / 1 - 20px);
+}
+.wp-block-blocks-course-price-table.has-2-columns .wp-block-blocks-course-price-block {
+  width: calc(100% / 2 - 20px);
+}
+.wp-block-blocks-course-price-table.has-3-columns .wp-block-blocks-course-price-block {
+  width: calc(100% / 3 - 20px);
+}
+.wp-block-blocks-course-price-table.has-4-columns .wp-block-blocks-course-price-block {
+  width: calc(100% / 4 - 20px);
+}
+.wp-block-blocks-course-price-table.has-5-columns .wp-block-blocks-course-price-block {
+  width: calc(100% / 5 - 20px);
+}
+.wp-block-blocks-course-price-table .wp-block-blocks-course-price-block {
+  background-color: azure;
+  box-shadow: 5px 5px 10px rgb(160, 217, 208);
+  margin: 10px;
+  max-width: none;
+  margin: 10;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(to bottom, rgb(121, 121, 219) 0%, rgb(249, 254, 255) 45%, white 100%);
+  /* Add the styles for h4, h2, li, and button here */
+}
+.wp-block-blocks-course-price-table .wp-block-blocks-course-price-block h4 {
+  color: white;
+  text-align: center;
+  margin-bottom: 10px; /* Adjust margin for a more normal appearance */
+  margin-top: 20px; /* Adjust margin for a more normal appearance */
+  font-size: 24px; /* Adjust font size for a more normal appearance */
+  font-weight: 700; /* Avoid using !important whenever possible */
+  font-family: "ProximaNova-Bold", Helvetica, Arial, sans-serif;
+  line-height: 1.5; /* Adjust line height for a more normal appearance */
+}
+.wp-block-blocks-course-price-table .wp-block-blocks-course-price-block h3 {
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px; /* Adjust margin for a more normal appearance */
+  margin-top: 0; /* Adjust margin for a more normal appearance */
+  font-weight: 600;
+  font-size: 48px; /* Adjust font size for a more normal appearance */
+}
+.wp-block-blocks-course-price-table .wp-block-blocks-course-price-block li {
+  margin-top: 20px; /* Adjust margin for a more normal appearance */
+  padding-bottom: 10px;
+  list-style-type: none;
+  letter-spacing: 0.5px; /* Adjust letter spacing for a more normal appearance */
+  line-height: 1.6; /* Adjust line height for a more normal appearance */
+  font-weight: 400;
+  font-size: 18px; /* Adjust font size for a more normal appearance */
+}
+.wp-block-blocks-course-price-table .wp-block-blocks-course-price-block button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 15px 30px;
+  font-size: 16px;
+  border: 1px solid #27264b;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #27264b;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 250ms ease-in-out;
+}
+.wp-block-blocks-course-price-table .wp-block-blocks-course-price-block button:hover {
+  background-color: rgb(0, 9, 64);
+}
+
+/*# sourceMappingURL=style-index.css.map*/

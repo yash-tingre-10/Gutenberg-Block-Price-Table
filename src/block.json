@@ -1,0 +1,27 @@
+{
+	"apiVersion": 3,
+	"name": "blocks-course/price-table",
+	"version": "0.1.0",
+	"title": "Price Table",
+	"category": "media",
+	"icon": "editor-table",
+	"description": "Price tables grid.",
+	"keywords":["Price","Block", "Grid"],
+	"supports": {
+		"html": false,
+		"color": true
+	},
+	"textdomain": "price tables",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"attributes":{
+		"columns":{
+			"type":"number",
+			"default": 3
+		}
+		
+		
+	}
+}
