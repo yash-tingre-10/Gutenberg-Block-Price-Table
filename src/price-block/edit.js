@@ -1,9 +1,9 @@
-import { useBlockProps, RichText } from '@wordpress/block-editor';
-import { Button, IconButton, PanelBody, ColorPalette } from '@wordpress/components';
+import { useBlockProps, RichText, InspectorControls, PanelColorSettings } from '@wordpress/block-editor';
+import { Button, IconButton, PanelBody, ColorPicker } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 export default function Edit({ attributes, setAttributes }) {
-    const { type, pricebox, specs, getstarted, items } = attributes;
+    const { type, pricebox, specs, getstarted, items, buttonColor } = attributes;
 
     const onChangeType = (newType) => {
         setAttributes({ type: newType });
@@ -40,6 +40,19 @@ export default function Edit({ attributes, setAttributes }) {
 
     return (
         <div {...useBlockProps()}>
+            <InspectorControls>
+                <PanelColorSettings
+                    title={__('Button Color', 'price-block')}
+                    colorSettings={[
+                        {
+                            value: buttonColor,
+                            onChange: (value) => setAttributes({ buttonColor: value }),
+                            label: __('Select a color for the button', 'price-block'),
+                        },
+                    ]}
+                />
+            </InspectorControls>
+
             <RichText
                 placeholder={__('PRO', 'price-block')}
                 tagName='h4'
@@ -83,6 +96,8 @@ export default function Edit({ attributes, setAttributes }) {
                 tagName='button'
                 onChange={onChangeGetstarted}
                 value={getstarted}
+                style={{ backgroundColor: buttonColor }}
+                className="custom-button-class"
                 id="my-get-started-button"
             />
         </div>

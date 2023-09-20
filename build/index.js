@@ -123,7 +123,8 @@ function Edit({
     pricebox,
     specs,
     getstarted,
-    items
+    items,
+    buttonColor
   } = attributes;
   const onChangeType = newType => {
     setAttributes({
@@ -169,7 +170,16 @@ function Edit({
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)()
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.PanelColorSettings, {
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button Color', 'price-block'),
+    colorSettings: [{
+      value: buttonColor,
+      onChange: value => setAttributes({
+        buttonColor: value
+      }),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Select a color for the button', 'price-block')
+    }]
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('PRO', 'price-block'),
     tagName: "h4",
     onChange: onChangeType,
@@ -199,6 +209,10 @@ function Edit({
     tagName: "button",
     onChange: onChangeGetstarted,
     value: getstarted,
+    style: {
+      backgroundColor: buttonColor
+    },
+    className: "custom-button-class",
     id: "my-get-started-button"
   }));
 }
@@ -259,6 +273,10 @@ __webpack_require__.r(__webpack_exports__);
       source: 'html',
       selector: 'button'
     },
+    buttonColor: {
+      type: 'string',
+      default: '#0073e5'
+    },
     items: {
       type: 'array',
       default: [],
@@ -303,7 +321,8 @@ function Save({
     pricebox,
     specs,
     getstarted,
-    items
+    items,
+    buttonColor
   } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
@@ -320,7 +339,10 @@ function Save({
     value: item.content
   })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     tagName: "button",
-    value: getstarted
+    value: getstarted,
+    style: {
+      backgroundColor: buttonColor
+    }
   }));
 }
 

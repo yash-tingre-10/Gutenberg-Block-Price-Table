@@ -40,6 +40,10 @@ registerBlockType('blocks-course/price-block', {
             source: 'html',
             selector: 'button',
         },
+        buttonColor: {
+            type: 'string',
+            default: '#0073e5',
+        },
         items: {
             type: 'array',
             default: [],

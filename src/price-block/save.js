@@ -1,7 +1,7 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 export default function Save({ attributes }) {
-    const { type, pricebox, specs, getstarted, items } = attributes;
+    const { type, pricebox, specs, getstarted, items, buttonColor } = attributes;
 
     return (
         <div {...useBlockProps.save()}>
@@ -14,7 +14,7 @@ export default function Save({ attributes }) {
                     </li>
                 ))}
             </ul>
-            <RichText.Content tagName="button" value={getstarted} />
+            <RichText.Content tagName="button" value={getstarted} style={{ backgroundColor: buttonColor }} />
         </div>
     );
 }
