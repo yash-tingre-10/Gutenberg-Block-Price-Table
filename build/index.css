@@ -110,9 +110,9 @@
 .wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] {
   margin: 10px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 5px 5px 10px rgb(160, 217, 208);
+  box-shadow: 5px 5px 5px rgb(131, 131, 131);
   border: none;
-  background: linear-gradient(to bottom, rgb(121, 121, 219) 0%, rgb(249, 254, 255) 45%, white 100%);
+  background: linear-gradient(to bottom, #6dd5ed, #ffffff);
   /* Add the styles for h4, h2, li, and button here */
 }
 .wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] h4 {
@@ -141,7 +141,7 @@
   font-weight: 400;
   font-size: 18px; /* Adjust font size for a more normal appearance */
 }
-.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] button {
+.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] #my-get-started-button {
   box-sizing: border-box;
   margin: 0;
   padding: 15px 30px;
@@ -154,12 +154,9 @@
   text-transform: uppercase;
   transition: background-color 250ms ease-in-out;
 }
-.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] button:hover {
+.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout > [data-type="blocks-course/price-block"] #my-get-started-button:hover {
   background-color: rgb(0, 9, 64);
-}
-.wp-block-blocks-course-price-table > .block-editor-inner-blocks > .block-editor-block-list__layout button:hover {
-  background-color: #9390db;
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 
 /*# sourceMappingURL=index.css.map*/

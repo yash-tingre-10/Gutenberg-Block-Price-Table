@@ -24,14 +24,14 @@
 }
 .wp-block-blocks-course-price-table .wp-block-blocks-course-price-block {
   background-color: azure;
-  box-shadow: 5px 5px 10px rgb(160, 217, 208);
+  box-shadow: 5px 5px 5px rgb(159, 159, 159);
   margin: 10px;
   max-width: none;
   margin: 10;
   text-align: center;
   border-radius: 5px;
   border: none;
-  background: linear-gradient(to bottom, rgb(121, 121, 219) 0%, rgb(249, 254, 255) 45%, white 100%);
+  background: linear-gradient(to bottom, #6dd5ed, #ffffff);
   /* Add the styles for h4, h2, li, and button here */
 }
 .wp-block-blocks-course-price-table .wp-block-blocks-course-price-block h4 {
@@ -60,7 +60,7 @@
   font-weight: 400;
   font-size: 18px; /* Adjust font size for a more normal appearance */
 }
-.wp-block-blocks-course-price-table .wp-block-blocks-course-price-block button {
+.wp-block-blocks-course-price-table .wp-block-blocks-course-price-block button:last-child {
   box-sizing: border-box;
   margin: 0;
   padding: 15px 30px;
@@ -73,8 +73,9 @@
   text-transform: uppercase;
   transition: background-color 250ms ease-in-out;
 }
-.wp-block-blocks-course-price-table .wp-block-blocks-course-price-block button:hover {
+.wp-block-blocks-course-price-table .wp-block-blocks-course-price-block button:last-child:hover {
   background-color: rgb(0, 9, 64);
+  color: #fff;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

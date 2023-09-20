@@ -122,7 +122,8 @@ function Edit({
     type,
     pricebox,
     specs,
-    getstarted
+    getstarted,
+    items
   } = attributes;
   const onChangeType = newType => {
     setAttributes({
@@ -144,6 +145,28 @@ function Edit({
       getstarted: newGetstarted
     });
   };
+  const onAddListItem = () => {
+    const newItems = [...items, {
+      content: ''
+    }];
+    setAttributes({
+      items: newItems
+    });
+  };
+  const onRemoveListItem = index => {
+    const newItems = [...items];
+    newItems.splice(index, 1);
+    setAttributes({
+      items: newItems
+    });
+  };
+  const onUpdateListItem = (index, content) => {
+    const newItems = [...items];
+    newItems[index].content = content;
+    setAttributes({
+      items: newItems
+    });
+  };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)()
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
@@ -156,16 +179,27 @@ function Edit({
     tagName: "h3",
     onChange: onChangePricebox,
     value: pricebox
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", null, items.map((item, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
+    key: index
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Add Features', 'price-block'),
-    tagName: "li",
-    onChange: onChangeSpecs,
-    value: specs
+    tagName: "span",
+    onChange: newContent => onUpdateListItem(index, newContent),
+    value: item.content
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.IconButton, {
+    icon: "trash",
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Delete Item', 'price-block'),
+    onClick: () => onRemoveListItem(index)
+  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.IconButton, {
+    icon: "plus-alt2",
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Add Item', 'price-block'),
+    onClick: onAddListItem
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Get Started', 'price-block'),
     tagName: "button",
     onChange: onChangeGetstarted,
-    value: getstarted
+    value: getstarted,
+    id: "my-get-started-button"
   }));
 }
 
@@ -189,10 +223,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)('blocks-course/price-block', {
-  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Price Block", "price-table"),
-  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("A specific price block", "price-table"),
+  title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Price Block', 'price-table'),
+  description: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('A specific price block', 'price-table'),
   icon: 'table-col-after',
-  parent: ["blocks-course/price-table"],
+  parent: ['blocks-course/price-table'],
   supports: {
     reusable: false,
     html: false,
@@ -206,25 +240,38 @@ __webpack_require__.r(__webpack_exports__);
   },
   attributes: {
     type: {
-      type: "string",
-      source: "html",
-      selector: "h4"
+      type: 'string',
+      source: 'html',
+      selector: 'h4'
+    },
+    pricebox: {
+      type: 'string',
+      source: 'html',
+      selector: 'h3'
+    },
+    specs: {
+      type: 'string',
+      source: 'html',
+      selector: 'li span'
+    },
+    getstarted: {
+      type: 'string',
+      source: 'html',
+      selector: 'button'
+    },
+    items: {
+      type: 'array',
+      default: [],
+      source: 'query',
+      selector: 'ul li',
+      query: {
+        content: {
+          type: 'string',
+          source: 'html',
+          selector: 'span'
+        }
+      }
     }
-  },
-  pricebox: {
-    type: "string",
-    source: "html",
-    selector: "h3"
-  },
-  specs: {
-    type: "string",
-    source: "html",
-    selector: "li"
-  },
-  getstarted: {
-    type: "string",
-    source: "html",
-    selector: "button"
   },
   edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
   save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -255,7 +302,8 @@ function Save({
     type,
     pricebox,
     specs,
-    getstarted
+    getstarted,
+    items
   } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
@@ -265,10 +313,12 @@ function Save({
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     tagName: "h3",
     value: pricebox
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
-    tagName: "li",
-    value: specs
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", null, items.map((item, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
+    key: index
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+    tagName: "span",
+    value: item.content
+  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     tagName: "button",
     value: getstarted
   }));
