@@ -85,4 +85,16 @@
   color: #fff;
 }
 
+.text-box-align-left {
+  text-align: left !important;
+}
+
+.text-box-align-center {
+  text-align: center !important;
+}
+
+.text-box-align-right {
+  text-align: right !important;
+}
+
 /*# sourceMappingURL=style-index.css.map*/

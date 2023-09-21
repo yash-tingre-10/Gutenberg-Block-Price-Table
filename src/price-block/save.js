@@ -1,11 +1,14 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 export default function Save({ attributes }) {
-    const { type, pricebox, getstarted, items, buttonColor } = attributes;
+    const { type, pricebox, getstarted, items, buttonColor, alignment } = attributes;
 
     return (
         <div {...useBlockProps.save()}>
-            <RichText.Content tagName="h4" value={type} />
+            <RichText.Content { ...useBlockProps.save( {
+				className: `text-box-align-${ alignment }`,
+			} ) }
+			 tagName="h4" value={type} />
             <RichText.Content tagName="h3" value={pricebox} />
             <ul>
                 {items.map((item, index) => (

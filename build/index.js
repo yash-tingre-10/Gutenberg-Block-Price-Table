@@ -123,7 +123,8 @@ function Edit({
     pricebox,
     getstarted,
     items,
-    buttonColor
+    buttonColor,
+    alignment
   } = attributes;
   const onChangeType = newType => {
     setAttributes({
@@ -133,11 +134,6 @@ function Edit({
   const onChangePricebox = newPricebox => {
     setAttributes({
       pricebox: newPricebox
-    });
-  };
-  const onChangeSpecs = newSpecs => {
-    setAttributes({
-      specs: newSpecs
     });
   };
   const onChangeGetstarted = newGetstarted => {
@@ -167,6 +163,11 @@ function Edit({
       items: newItems
     });
   };
+  const onChangeAlignment = newAlignment => {
+    setAttributes({
+      alignment: newAlignment
+    });
+  };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)()
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.PanelColorSettings, {
@@ -179,11 +180,17 @@ function Edit({
       label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Select a color for the button', 'price-block')
     }]
   })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
+      className: `text-box-align-${alignment}`
+    }),
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('PRO', 'price-block'),
     tagName: "h4",
     onChange: onChangeType,
     value: type
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.AlignmentToolbar, {
+    value: alignment,
+    onChange: onChangeAlignment
+  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('$10.99', 'price-block'),
     tagName: "h3",
     onChange: onChangePricebox,
@@ -315,11 +322,15 @@ function Save({
     pricebox,
     getstarted,
     items,
-    buttonColor
+    buttonColor,
+    alignment
   } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+    ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
+      className: `text-box-align-${alignment}`
+    }),
     tagName: "h4",
     value: type
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {

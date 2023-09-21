@@ -1,9 +1,9 @@
-import { useBlockProps, RichText, InspectorControls, PanelColorSettings } from '@wordpress/block-editor';
+import { useBlockProps, RichText, InspectorControls, PanelColorSettings,BlockControls, AlignmentToolbar } from '@wordpress/block-editor';
 import { Button, IconButton, PanelBody, ColorPicker } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 export default function Edit({ attributes, setAttributes }) {
-    const { type, pricebox, getstarted, items, buttonColor,  } = attributes;
+    const { type, pricebox, getstarted, items, buttonColor, alignment  } = attributes;
 
     const onChangeType = (newType) => {
         setAttributes({ type: newType });
@@ -13,9 +13,6 @@ export default function Edit({ attributes, setAttributes }) {
         setAttributes({ pricebox: newPricebox });
     };
 
-    const onChangeSpecs = (newSpecs) => {
-        setAttributes({ specs: newSpecs });
-    };
 
     const onChangeGetstarted = (newGetstarted) => {
         setAttributes({ getstarted: newGetstarted });
@@ -38,8 +35,16 @@ export default function Edit({ attributes, setAttributes }) {
         setAttributes({ items: newItems });
     };
 
+    const onChangeAlignment = ( newAlignment ) => {
+		setAttributes( { alignment: newAlignment } );
+	};
+
     return (
         <div {...useBlockProps()}>
+
+            
+
+
             <InspectorControls>
                 <PanelColorSettings
                     title={__('Button Color', 'price-block')}
@@ -53,12 +58,23 @@ export default function Edit({ attributes, setAttributes }) {
                 />
             </InspectorControls>
 
-            <RichText
+            
+
+            <RichText { ...useBlockProps( {
+					className: `text-box-align-${ alignment }`,
+				} ) }
                 placeholder={__('PRO', 'price-block')}
                 tagName='h4'
                 onChange={onChangeType}
                 value={type}
             />
+
+            <BlockControls>
+				<AlignmentToolbar
+					value={ alignment }
+					onChange={ onChangeAlignment }
+				/>
+			</BlockControls>
 
             <RichText
                 placeholder={__('$10.99', 'price-block')}
