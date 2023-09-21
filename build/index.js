@@ -121,7 +121,6 @@ function Edit({
   const {
     type,
     pricebox,
-    specs,
     getstarted,
     items,
     buttonColor
@@ -263,11 +262,6 @@ __webpack_require__.r(__webpack_exports__);
       source: 'html',
       selector: 'h3'
     },
-    specs: {
-      type: 'string',
-      source: 'html',
-      selector: 'li span'
-    },
     getstarted: {
       type: 'string',
       source: 'html',
@@ -319,7 +313,6 @@ function Save({
   const {
     type,
     pricebox,
-    specs,
     getstarted,
     items,
     buttonColor

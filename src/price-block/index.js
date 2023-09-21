@@ -30,11 +30,6 @@ registerBlockType('blocks-course/price-block', {
             source: 'html',
             selector: 'h3',
         },
-        specs: {
-            type: 'string',
-            source: 'html',
-            selector: 'li span',
-        },
         getstarted: {
             type: 'string',
             source: 'html',

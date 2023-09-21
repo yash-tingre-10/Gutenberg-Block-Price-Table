@@ -3,7 +3,7 @@ import { Button, IconButton, PanelBody, ColorPicker } from '@wordpress/component
 import { __ } from '@wordpress/i18n';
 
 export default function Edit({ attributes, setAttributes }) {
-    const { type, pricebox, specs, getstarted, items, buttonColor } = attributes;
+    const { type, pricebox, getstarted, items, buttonColor,  } = attributes;
 
     const onChangeType = (newType) => {
         setAttributes({ type: newType });

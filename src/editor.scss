@@ -50,7 +50,7 @@
 			/* Add the styles for h4, h2, li, and button here */
 
 			h4 {
-				color: white;
+				color: rgb(0, 0, 0);
 				text-align: center;
 				margin-bottom: 10px; /* Adjust margin for a more normal appearance */
 				margin-top: 20px; /* Adjust margin for a more normal appearance */
@@ -68,19 +68,19 @@
 				font-size: 48px; /* Adjust font size for a more normal appearance */
 			  }
 			  
+			  ul {
+				list-style: none;
+			  }
+			
 			  li {
-				margin-top: 20px; /* Adjust margin for a more normal appearance */
-				padding-bottom: 10px;
-				list-style-type: none;
-				letter-spacing: 0.5px; /* Adjust letter spacing for a more normal appearance */
-				line-height: 1.6; /* Adjust line height for a more normal appearance */
-				font-weight: 400;
-				font-size: 18px; /* Adjust font size for a more normal appearance */
+				margin: 15px;
+				text-align: center;
+				flex: 1 1 calc(33.33% - 20px); /* Adjust the width as needed */
 			  }
 			  
 			  #my-get-started-button {
 				box-sizing: border-box;
-				margin: 0;
+				margin: 15;
 				padding: 15px 30px;
 				font-size: 16px;
 				border: 1px solid #27264b;

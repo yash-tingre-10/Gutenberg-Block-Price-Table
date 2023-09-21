@@ -26,11 +26,20 @@
 		border: none;
 		background: linear-gradient(to bottom, #6dd5ed, #ffffff);
 
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+
+		
+		
+		  
 		
 		/* Add the styles for h4, h2, li, and button here */
 
 		h4 {
-			color: white;
+			color: rgb(0, 0, 0);
 			text-align: center;
 			margin-bottom: 10px; /* Adjust margin for a more normal appearance */
 			margin-top: 20px; /* Adjust margin for a more normal appearance */
@@ -47,21 +56,28 @@
 			font-weight: 600;
 			font-size: 48px; /* Adjust font size for a more normal appearance */
 		  }
+
 		  
-		  li {
-			margin-top: 20px; /* Adjust margin for a more normal appearance */
-			padding-bottom: 10px;
-			list-style-type: none;
-			letter-spacing: 0.5px; /* Adjust letter spacing for a more normal appearance */
-			line-height: 1.6; /* Adjust line height for a more normal appearance */
-			font-weight: 400;
-			font-size: 18px; /* Adjust font size for a more normal appearance */
+		  ul {
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
 		  }
+		
+		  li {
+			margin: 15px;
+			text-align: center;
+			flex: 1 1 calc(33.33% - 20px); /* Adjust the width as needed */
+			font-weight: 400;
+			font-size: 18px; 
+		  }
+
 		  
 
 		  button:last-child {
+			
 			box-sizing: border-box;
-			margin: 0;
+			margin: 15px;
 			padding: 15px 30px;
 			font-size: 16px;
 			border: 1px solid #27264b;
@@ -71,12 +87,17 @@
 			cursor: pointer;
 			text-transform: uppercase;
 			transition: background-color 250ms ease-in-out;
+
+			// button sticky bottom 
+			
 		  }
 		  
 		  button:last-child:hover {
 			background-color: rgb(0, 9, 64);
 			color: #fff;
 		  }
+		  
+
 		  
 
 
