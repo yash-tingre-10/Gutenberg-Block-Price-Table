@@ -119,12 +119,12 @@ function Edit({
   setAttributes
 }) {
   const {
-    type,
-    pricebox,
-    getstarted,
-    items,
-    buttonColor,
-    alignment
+    type = 'PRO',
+    pricebox = '$16.99',
+    getstarted = 'Get Started',
+    items = [],
+    buttonColor = 'orange',
+    alignment = 'right'
   } = attributes;
   const onChangeType = newType => {
     setAttributes({
@@ -318,12 +318,12 @@ function Save({
   attributes
 }) {
   const {
-    type,
-    pricebox,
-    getstarted,
-    items,
-    buttonColor,
-    alignment
+    type = 'PRO',
+    pricebox = '$16.99',
+    getstarted = 'Get Started',
+    items = [],
+    buttonColor = 'orange',
+    alignment = 'right'
   } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()

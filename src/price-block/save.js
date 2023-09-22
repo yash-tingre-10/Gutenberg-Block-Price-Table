@@ -1,7 +1,14 @@
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 
 export default function Save({ attributes }) {
-    const { type, pricebox, getstarted, items, buttonColor, alignment } = attributes;
+    const { 
+        type = 'PRO',
+        pricebox = '$16.99',
+        getstarted = 'Get Started',
+        items = [],
+        buttonColor = 'orange',
+        alignment = 'right'
+    } = attributes;
 
     return (
         <div {...useBlockProps.save()}>

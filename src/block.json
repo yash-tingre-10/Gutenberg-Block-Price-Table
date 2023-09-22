@@ -2,9 +2,9 @@
 	"apiVersion": 3,
 	"name": "blocks-course/price-table",
 	"version": "0.1.0",
-	"title": "Price Table",
+	"title": "Price Box",
 	"category": "media",
-	"icon": "editor-table",
+	"icon": "columns",
 	"description": "Price tables grid.",
 	"keywords":["Price","Block", "Grid"],
 	"supports": {
