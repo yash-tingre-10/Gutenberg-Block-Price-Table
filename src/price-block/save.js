@@ -16,7 +16,9 @@ export default function Save({ attributes }) {
 				className: `text-box-align-${ alignment }`,
 			} ) }
 			 tagName="h4" value={type} />
-            <RichText.Content tagName="h3" value={pricebox} />
+			 
+            <RichText.Content 
+			tagName="h3" value={pricebox} />
             <ul>
                 {items.map((item, index) => (
                     <li key={index}>

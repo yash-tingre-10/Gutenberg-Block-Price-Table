@@ -1,5 +1,5 @@
 import { useBlockProps, RichText, InspectorControls, PanelColorSettings,BlockControls, AlignmentToolbar } from '@wordpress/block-editor';
-import { Button, IconButton, PanelBody, ColorPicker } from '@wordpress/components';
+import { Button, IconButton, PanelBody, ColorPicker, Toolbar } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 export default function Edit({ attributes, setAttributes }) {
@@ -47,6 +47,17 @@ export default function Edit({ attributes, setAttributes }) {
 		setAttributes( { alignment: newAlignment } );
 	};
 
+
+    const moveBlockUp = () => {
+    // Ill be adding logic here soon 
+  };
+
+  
+  const moveBlockDown = () => {
+    // Ill be adding logic here soon 
+  };
+
+
     return (
         <div {...useBlockProps()}>
 
@@ -76,15 +87,30 @@ export default function Edit({ attributes, setAttributes }) {
                 onChange={onChangeType}
                 value={type}
             />
-
+        {/* Toolbar OPtions */}
             <BlockControls>
+            <Toolbar>
+                <IconButton
+                    icon="arrow-up-alt2"
+                    label={__('Move Up', 'my-plugin')}
+                    onClick={moveBlockUp}
+                />
+                <IconButton
+                    icon="arrow-down-alt2"
+                    label={__('Move Down', 'my-plugin')}
+                    onClick={moveBlockDown}
+                />
+                </Toolbar>
+                
 				<AlignmentToolbar
 					value={ alignment }
 					onChange={ onChangeAlignment }
 				/>
 			</BlockControls>
 
-            <RichText
+            {/* Toolbar options end here  */}
+
+            <RichText 
                 placeholder={__('$10.99', 'price-block')}
                 tagName='h3'
                 onChange={onChangePricebox}
