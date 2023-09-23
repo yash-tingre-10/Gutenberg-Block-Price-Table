@@ -175,65 +175,36 @@ function Edit({
     // Ill be adding logic here soon 
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)()
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.PanelColorSettings, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Button Color', 'price-block'),
-    colorSettings: [{
-      value: buttonColor,
-      onChange: value => setAttributes({
-        buttonColor: value
-      }),
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Select a color for the button', 'price-block')
-    }]
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
-      className: `text-box-align-${alignment}`
-    }),
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('PRO', 'price-block'),
-    tagName: "h4",
-    onChange: onChangeType,
-    value: type
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Toolbar, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.IconButton, {
-    icon: "arrow-up-alt2",
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Move Up', 'my-plugin'),
-    onClick: moveBlockUp
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.IconButton, {
-    icon: "arrow-down-alt2",
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Move Down', 'my-plugin'),
-    onClick: moveBlockDown
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.AlignmentToolbar, {
-    value: alignment,
-    onChange: onChangeAlignment
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('$10.99', 'price-block'),
-    tagName: "h3",
-    onChange: onChangePricebox,
-    value: pricebox
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", null, items.map((item, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    key: index
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Add Features', 'price-block'),
-    tagName: "span",
-    onChange: newContent => onUpdateListItem(index, newContent),
-    value: item.content
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.IconButton, {
-    icon: "trash",
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Delete Item', 'price-block'),
-    onClick: () => onRemoveListItem(index)
-  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.IconButton, {
-    icon: "plus-alt2",
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Add Item', 'price-block'),
-    onClick: onAddListItem
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Get Started', 'price-block'),
-    tagName: "button",
-    onChange: onChangeGetstarted,
-    value: getstarted,
-    style: {
-      backgroundColor: buttonColor
-    },
-    className: "custom-button-class",
-    id: "my-get-started-button"
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({})
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
+    allowedBlocks: ['core/heading', 'core/list', 'core/paragraph', 'core/buttons', 'core/list-item'],
+    template: [['core/heading', {
+      level: 3,
+      content: 'FREE',
+      align: 'center'
+    }], ['core/paragraph', {
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      fontSize: 'small'
+    }], ['core/heading', {
+      level: 1,
+      content: '$20.99',
+      align: 'center'
+    }], ['core/paragraph', {
+      content: 'Spectra Pro Includes:',
+      fontSize: 'small'
+    }], ['core/list', {
+      placeholder: 'Enter list items...'
+    }, [['core/list-item', {
+      placeholder: 'Predefined Item 1'
+    }], ['core/list-item', {
+      placeholder: 'Predefined Item 2'
+    }], ['core/list-item', {
+      placeholder: 'Predefined Item 3'
+    }]]], ['core/buttons', {
+      text: 'Notify Me / Your Text',
+      align: 'center',
+      size: 'small'
+    }]]
   }));
 }
 
@@ -337,31 +308,11 @@ function Save({
     getstarted = 'Get Started',
     items = [],
     buttonColor = 'orange',
-    alignment = 'right'
+    innerBlocksContent
   } = attributes;
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save()
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
-    ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
-      className: `text-box-align-${alignment}`
-    }),
-    tagName: "h4",
-    value: type
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
-    tagName: "h3",
-    value: pricebox
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", null, items.map((item, index) => (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    key: index
-  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
-    tagName: "span",
-    value: item.content
-  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
-    tagName: "button",
-    value: getstarted,
-    style: {
-      backgroundColor: buttonColor
-    }
-  }));
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, null));
 }
 
 /***/ }),

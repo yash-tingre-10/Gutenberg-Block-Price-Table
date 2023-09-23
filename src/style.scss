@@ -3,8 +3,7 @@
 .wp-block-blocks-course-price-table {
 
 	
-	margin-left: -10px;
-	margin-left: -10px;
+	
 	display: flex;
 	flex-wrap: wrap;
 	@for $i from 1 to 6{
@@ -27,10 +26,7 @@
 		background: linear-gradient(to bottom, #6dd5ed, #ffffff);
 
 
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		height: 100%;
+		
 
 		
 		
@@ -38,78 +34,65 @@
 		
 		/* Add the styles for h4, h2, li, and button here */
 
-		h4 {
-			color: rgb(0, 0, 0);
-			text-align: center;
-			margin-bottom: 10px; /* Adjust margin for a more normal appearance */
-			margin-top: 20px; /* Adjust margin for a more normal appearance */
-			font-size: 24px; /* Adjust font size for a more normal appearance */
-			font-weight: 700; /* Avoid using !important whenever possible */
-			font-family: 'ProximaNova-Bold', Helvetica, Arial, sans-serif;
-			line-height: 1.5; /* Adjust line height for a more normal appearance */
-		  }
+		// h4 {
+		// 	color: rgb(0, 0, 0);
+		// 	text-align: center;
+		// 	margin-bottom: 10px; /* Adjust margin for a more normal appearance */
+		// 	margin-top: 20px; /* Adjust margin for a more normal appearance */
+		// 	font-size: 24px; /* Adjust font size for a more normal appearance */
+		// 	font-weight: 700; /* Avoid using !important whenever possible */
+		// 	font-family: 'ProximaNova-Bold', Helvetica, Arial, sans-serif;
+		// 	line-height: 1.5; /* Adjust line height for a more normal appearance */
+		//   }
 		  
-		  h3 {
-			color: rgb(0, 0, 0);
-			margin-bottom: 10px; /* Adjust margin for a more normal appearance */
-			margin-top: 0; /* Adjust margin for a more normal appearance */
-			font-weight: 600;
-			font-size: 48px; /* Adjust font size for a more normal appearance */
-		  }
+		//   h3 {
+		// 	color: rgb(0, 0, 0);
+		// 	margin-bottom: 10px; /* Adjust margin for a more normal appearance */
+		// 	margin-top: 0; /* Adjust margin for a more normal appearance */
+		// 	font-weight: 600;
+		// 	font-size: 48px; /* Adjust font size for a more normal appearance */
+		//   }
 
 		  
-		  ul {
-			list-style: none;
-			margin: 0px;
-			padding: 0px;
-		  }
+		//   ul {
+		// 	list-style: none;
+		// 	margin: 0px;
+		// 	padding: 0px;
+		//   }
 		
-		  li {
-			margin: 15px;
-			text-align: center;
-			flex: 1 1 calc(33.33% - 20px); /* Adjust the width as needed */
-			font-weight: 400;
-			font-size: 18px; 
-		  }
+		//   li {
+		// 	margin: 15px;
+		// 	text-align: center;
+		// 	flex: 1 1 calc(33.33% - 20px); /* Adjust the width as needed */
+		// 	font-weight: 400;
+		// 	font-size: 18px; 
+		//   }
 
 		  
 
-		  button:last-child {
+		//   button:last-child {
 			
-			box-sizing: border-box;
-			margin: 15px;
-			padding: 15px 30px;
-			font-size: 16px;
-			border: 1px solid #27264b;
-			border-radius: 5px;
-			background-color: #fff;
-			color: #27264b;
-			cursor: pointer;
-			text-transform: uppercase;
-			transition: background-color 250ms ease-in-out;
+		// 	box-sizing: border-box;
+		// 	margin: 15px;
+		// 	padding: 15px 30px;
+		// 	font-size: 16px;
+		// 	border: 1px solid #27264b;
+		// 	border-radius: 5px;
+		// 	background-color: #fff;
+		// 	color: #27264b;
+		// 	cursor: pointer;
+		// 	text-transform: uppercase;
+		// 	transition: background-color 250ms ease-in-out;
 
-			// button sticky bottom 
+		// 	// button sticky bottom 
 			
-		  }
+		//   }
 		  
-		  button:last-child:hover {
-			background-color: rgb(0, 9, 64);
-			color: #fff;
-		  }
+		//   button:last-child:hover {
+		// 	background-color: rgb(0, 9, 64);
+		// 	color: #fff;
+		//   }
 		
 	}
 }
 
-.text-box-align-left {
-    text-align: left !important;
-  }
-
-  .text-box-align-center {
-    text-align: center !important;
-   
-  }
-
-  .text-box-align-right {
-    text-align: right !important;
-    
-  }
