@@ -2,6 +2,8 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
   \***************************************************************************************************************************************************************************************************************************************/
 .wp-block-blocks-course-price-table {
+  width: 100%;
+  max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -30,7 +32,17 @@
   border-radius: 5px;
   border: none;
   background: linear-gradient(to bottom, #6dd5ed, #ffffff);
+  padding: 10px;
   /* Add the styles for h4, h2, li, and button here */
+}
+.wp-block-blocks-course-price-table .wp-block-blocks-course-price-block ul {
+  list-style: none;
+  padding: 5px;
+  margin: 0px;
+  text-align: center;
+}
+.wp-block-blocks-course-price-table .wp-block-blocks-course-price-block li {
+  margin: 0px; /* This resets the line height */
 }
 
 /*# sourceMappingURL=style-index.css.map*/

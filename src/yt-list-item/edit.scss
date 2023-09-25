@@ -1,0 +1,22 @@
+.my-custom-block {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.my-custom-list {
+    list-style: none;
+    padding: 0;
+}
+
+.my-custom-list li {
+    text-align: left;
+}
+
+.my-custom-list li.align-center {
+    text-align: center;
+}
+
+.my-custom-list li.align-right {
+    text-align: right;
+}

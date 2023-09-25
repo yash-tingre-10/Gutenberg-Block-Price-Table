@@ -1,5 +1,7 @@
 .wp-block-blocks-course-price-table {
 	display: block;
+	width: 100%;
+	max-width: 1000px;
 
 	
 	@for $i from 1 through 6 {
@@ -8,13 +10,13 @@
 			> .block-editor-inner-blocks > .block-editor-block-list__layout > {
 
 				[data-type="blocks-course/price-block"] {
-					width: calc(100% / #{$i} - 20px);
+					width: calc(100% / #{$i} - 50px);
       				// background: linear-gradient(to bottom, skyblue 38%, white 38%, white 100%);
 				}
 
 				.block-list-appender {
 					align-self: stretch;
-					width: calc(100% / #{$i} - 20px);
+					width: calc(100% / #{$i} - 50px);
 					border: 1px dashed;
 					display: flex;
 					align-items: center;
@@ -36,6 +38,7 @@
 			margin: 10;
 			text-align: center;
 			border-radius: 5px;
+			padding: 10px;
 		}
 
 		> [data-type="blocks-course/price-block"] {
@@ -44,10 +47,22 @@
 			box-shadow: 5px 5px 5px rgb(131, 131, 131);
 			// box-shadow: 5px 5px 10px rgb(160, 217, 208);
 			border: none;
-			background: linear-gradient(to bottom, #6dd5ed, #ffffff);
+			// background: linear-gradient(to bottom, #6dd5ed, #ffffff);
 			
 
 			/* Add the styles for h4, h2, li, and button here */
+
+			ul {
+			list-style: none;
+			padding: 0;
+			text-align: center;
+		}
+	
+		li {
+			margin-bottom: 5px;
+			line-height: initial; /* This resets the line height */
+			text-align: center;
+		}
 
 			// h4 {
 			// 	color: rgb(0, 0, 0);

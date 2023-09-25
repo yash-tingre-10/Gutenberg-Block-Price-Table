@@ -61,27 +61,30 @@ export default function Edit({ attributes, setAttributes }) {
     return (
         <div {...useBlockProps({  })}>
 
-<InnerBlocks
-    allowedBlocks={['core/heading', 'core/list', 'core/paragraph', 'core/buttons','core/list-item']}
-    template={[
-        ['core/heading', { level: 3, content: 'FREE', align: 'center' }],
-        ['core/paragraph', { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', fontSize: 'small' }],
-        ['core/heading', { level: 1, content: '$20.99', align: 'center' }],
-        ['core/paragraph', { content: 'Spectra Pro Includes:', fontSize: 'small' }],
-        ['core/list', { placeholder: 'Enter list items...' },
-            [
-                ['core/list-item', { placeholder: 'Predefined Item 1' }],
-                ['core/list-item', { placeholder: 'Predefined Item 2' }],
-                ['core/list-item', { placeholder: 'Predefined Item 3' }]
-            ]
-        ],
-        ['core/buttons', {
-            text: 'Notify Me / Your Text',
-            align: 'center',
-            size: 'small',
-        }]
-    ]}
-/>
+            <InnerBlocks
+                allowedBlocks={['core/heading', 'core/list', 'core/paragraph', 'core/buttons','core/list-item', 'my-plugin/my-block']}
+                template={[
+                    ['core/heading', { level: 3, content: 'FREE', align: 'center' }],
+                    ['core/paragraph', { content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', fontSize: 'small' }],
+                    ['core/heading', { level: 1, content: '$20.99', align: 'center' }],
+                    ['core/paragraph', { content: 'Spectra Pro Includes:', fontSize: 'small' }],
+                    ['core/list', { placeholder: 'Enter list items...' },
+                        [
+                            ['core/list-item', { placeholder: 'Predefined Item 1' }],
+                            ['core/list-item', { placeholder: 'Predefined Item 2' }],
+                            ['core/list-item', { placeholder: 'Predefined Item 3' }]
+                        ]
+                    ],
+                    ['my-plugin/my-block'],
+                    ['core/buttons', {
+                        text: 'Notify Me / Your Text',
+                        align: 'center',
+                        size: 'small',
+                    }],
+                ]}
+            />
+
+            
 
 
 
